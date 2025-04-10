@@ -28,7 +28,9 @@ struct MyHabitsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                HomeViewBuilder.makeView()                
+            }
         }
         .modelContainer(sharedModelContainer)
     }

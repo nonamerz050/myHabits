@@ -8,5 +8,8 @@
 import Foundation
 
 final class DIContainer: ObservableObject {
+    static let shared = DIContainer()
+    lazy var habitService: HabitServiceProtocol = HabitServiceMock()
     
+    init() {}
 }
